@@ -1,6 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/kicad,macos,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=kicad,macos,linux
 
+jlcpcb/
+
+*.kicad_sch_old
+*.kicad_pcb_old
+*.lck
+
 ### KiCad ###
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/

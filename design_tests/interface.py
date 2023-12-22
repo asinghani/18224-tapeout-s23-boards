@@ -3,7 +3,7 @@ import time
 import sys
 
 class Chip:
-    def __init__(self, serial_port, baud, delay=0.001):
+    def __init__(self, serial_port, baud=115200, delay=0.001):
         self.port = serial.Serial(serial_port, baud, timeout=0)
         self.reset = False
         self.out_state = 0x000

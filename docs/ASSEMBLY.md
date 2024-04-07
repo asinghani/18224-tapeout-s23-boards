@@ -46,7 +46,7 @@ Before starting the flashing/test process:
 
 2. Wire up the Tag-Connect to your Arduino. The pins you need are SWD, SWC, RESETn, 3V3, and GND. Following is the pinout of the Tag-Connect on the board (hole pattern is asymmetric and can be used to orient).
 
-![](tagconnect.png)
+![](imgs/tagconnect.png)
 
 3. (Optionally) use an external current-limited PSU to provide 3V3 rail for the Tag-Connect. Otherwise it can use the Arduino's 3V3 rail. If using PSU, make sure Arduino's ground pin is connected too, to prevent ground-loops.
 

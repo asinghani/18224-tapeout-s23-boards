@@ -9,13 +9,20 @@ uint8_t read_blocking() {
 
 void setup() {
     Serial.begin(115200);
-    init_portio();
+    bool initialized = false;
 
     Serial.setTimeout(0);
 
     bool led = false;
     while (true) {
         if (read_blocking() == 0x5B) {
+            
+            if (!initialized) {
+                // Delayed init to give the user a chance to unplug
+                // any extra circuits before starting the script
+                init_portio();
+            }
+
             uint8_t hi  = read_blocking();
             uint8_t lo  = read_blocking();
             uint8_t chk = read_blocking();

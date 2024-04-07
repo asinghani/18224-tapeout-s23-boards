@@ -1,0 +1,13 @@
+2024-03-16 23:43:10,785 - panelizer_logger - INFO - Running Panelizer
+2024-03-16 23:43:10,786 - panelizer_logger - INFO - ['--panelx', '127.000000', '--panely', '76.200000', '--larger', '--vscorelayer', 'User.Comments', '--vscoretextlayer', 'User.Comments', '--gapx', '0.000000', '--gapy', '0.000000', '--exposeedge', '--vrail', '6.35', '--fiducialslr']
+2024-03-16 23:43:10,788 - panelizer_logger - INFO - PANELIZER START: 2024-03-16T23:43:10.788500
+2024-03-16 23:43:14,708 - panelizer_logger - WARNING - 
+START: 2024-03-16T23:43:10.788487
+Board saved by user.
+
+Board: /Users/anish/projects/hardware/18224-tapeout-s23-boards/pcb/caravel_m2_card/Production/caravel-M.2-card-QFN_panelized.kicad_pcb
+Board dimensions: 22.01 x 22.01 mm.
+You can fit 6 x 2 boards on the panel.
+Ordering Instructions not found! No futher ordering warnings will be given.
+
+2024-03-16 23:43:16,184 - panelizer_logger - INFO - Panelizer complete

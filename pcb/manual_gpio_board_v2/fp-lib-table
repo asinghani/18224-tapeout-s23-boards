@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SS12F44G4")(type "KiCad")(uri "${KIPRJMOD}/parts/SS12F44G4.pretty")(options "")(descr ""))
+)

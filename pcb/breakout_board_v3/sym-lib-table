@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MicroMod-Sparkfun")(type "KiCad")(uri "${KIPRJMOD}/parts/MicroMod-Sparkfun/MicroMod-Sparkfun.kicad_sym")(options "")(descr ""))
+)

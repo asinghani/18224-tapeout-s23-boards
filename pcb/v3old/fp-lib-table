@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "MicroMod-Sparkfun")(type "KiCad")(uri "${KIPRJMOD}/parts/MicroMod-Sparkfun")(options "")(descr ""))
+)

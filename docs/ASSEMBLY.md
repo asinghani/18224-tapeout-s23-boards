@@ -4,6 +4,8 @@ geometry: margin=3cm
 
 # Board Assembly Instructions
 
+(Note: These instructions are for instructors to assemble breakout boards post-tapeout. If you are a student of the course, you should not need to do any of these.)
+
 ## Ordering Boards
 
 Boards are ordered from JLCPCB using their PCBA service. Part IDs on LCSC are added to the KiCAD schematic and can be used to generate assembly files using KiCAD JLC plugin and/or using Excel (note that some parts may need to be swapped out due to stock reasons). Assembly quality has been fairly good so far, though some parts need to be manually rotated in the online JLC viewer because they don't always align correctly. It is recommended to pay the few dollars extra for board cleaning + extra padded packaging.
@@ -46,7 +48,7 @@ Before starting the flashing/test process:
 
 2. Wire up the Tag-Connect to your Arduino. The pins you need are SWD, SWC, RESETn, 3V3, and GND. Following is the pinout of the Tag-Connect on the board (hole pattern is asymmetric and can be used to orient).
 
-<img src="imgs/tagconnect.png" width="640">
+![](imgs/tagconnect.png)
 
 3. (Optionally) use an external current-limited PSU to provide 3V3 rail for the Tag-Connect. Otherwise it can use the Arduino's 3V3 rail. If using PSU, make sure Arduino's ground pin is connected too, to prevent ground-loops.
 

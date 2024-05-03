@@ -4,13 +4,34 @@ geometry: margin=3cm
 
 # Board Bringup Instructions
 
+## Kit Contents
+
+(Please be cautious when opening the kit as small parts are easy to lose. The kits include spares for some—but not all—parts.)
+
+- Debugger Board Kit
+    - Debugger Board (assembled, with your ASIC)
+    - 30-pin male header
+    - 2-pin male header
+    - 2-pin jumper
+
+- Switches Kit
+    - Buttons/Switches Board
+    - 30-pin female header
+    - 12x switches
+    - 2x 3-pin male header
+    - 2x 2-pin jumper
+
+## Contact
+
+If you run into any issues, feel free to email `ece224-bringup-help-s23 [at] lists.andrew.cmu.edu` for help! Additionally, if you get your design working, we'd love to hear about it, so please do let us know!
+
 ## Overview of the Debugger Board
 
 To assist in bringup and testing of your tapeout projects, we have provided a "debugger" board that includes your chip, 1V8 and 3V3 power rails, and an ATSAMD21 microcontroller flashed with an Arduino bootloader for easy testing.
 
 (TODO: image of the fully assembled board with annotations)
 
-The board is powered via USB-C and can be powered from your computer or a wall-plug.
+The board is powered via USB-C and can be powered from your computer. Please make sure you are using a USB-C cable with data lines (if you are using a "power-only" cable or the cable isn't firmly connected, it will appear to power up but not be detected by the serial port).
 
 ## Selecting a Project
 
@@ -71,19 +92,17 @@ Important note: if you are sensitive to speed, it is recommended to use a single
 
 #### Example Code
 
-(TODO: change the example code from Jupyter notebooks to flat Python files)
+See the example `.py` (Python scripts) and `.ipynb` (Jupyter notebooks - you will need to set up Jupyter locally) in [design_tests](design_tests/) for an example of how to use this interface.
+
+You may need to `pip3 install pyserial` (important: it is `pyserial` and not `serial`) to get the dependency loaded.
 
 ### Method (2): Arduino Debugger Interface
 
 If you need higher clock speed than the Python setup, you can also use the Arduino debugger, which can run at update rates upwards of 500kHz. In this case, you would write your code in Arduino C++ and flash it directly to the board. The board uses a bootloader based on that of the Adafruit Circuit Playground Express (SAMD21), so it will show up as such on the Arduino IDE.
 
-#### Setting up Arduino IDE
-
-(TODO: download Arduino IDE 2.0 so I can actually write these instructions)
-
 #### Flashing the Arduino
 
-(TODO: download Arduino IDE 2.0 so I can actually write these instructions)
+You can flash the microcontroller using the Arduino IDE. It will appear to the IDE as a Circuit Playground. Avoid using the Arduino-style pin numbering - instead please use our `chip_interface` wrapper as it directly uses the microcontroller's I/O registers to feed inputs/outputs to your design.
 
 #### Writing Code
 
@@ -122,8 +141,7 @@ The following functions are provided:
 
 #### Example Code
 
-Some example programs are provided in `debugger_fw/d01_example_adder`, `debugger_fw/d02_example_counter`, and `debugger_fw/d05_meta_info`.
-
+Some example programs are provided in [debugger_fw/d01_example_adder](debugger_fw/d01_example_adder), [debugger_fw/d02_example_counter](debugger_fw/d02_example_counter), and [debugger_fw/d05_meta_info](debugger_fw/d05_meta_info).
 
 ### Method (3): Switches/Buttons Board
 
@@ -173,6 +191,8 @@ Varies based on your project. If you're using a single-stepped clock, you must s
 - Reset does not synchronize
 
 ## Internal Documentation
+
+TODO
 
 - link to schematics
 - link to kicad files

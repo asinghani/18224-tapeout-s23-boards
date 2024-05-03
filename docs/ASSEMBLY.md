@@ -14,13 +14,9 @@ Boards are ordered from JLCPCB using their PCBA service. Part IDs on LCSC are ad
 
 JLC is able to populate all surface-mount components except for the M.2 standoff (in theory they can handle this as well, but we've had issues in the past with them not understanding how screws work). After receiving boards from JLC, they are populated as follows:
 
-(TODO: insert picture of fresh board from JLC)
-
 For each board:
 
 1. Inspect all solder joints for quality, bridging, or major orientation issues. JLC quality is good but not perfect, and occasionally parts are oriented incorrectly or have solder bridges:
-
-(TODO: insert picture of upside down chip)
 
 2. Solder the standoff. Because of the metal mass, it requires a lot more heat than you'd expect. You'll want to clamp down the board and use a tweezer to push down on the standoff (make sure it sits flat) while you melt the solder.
 
@@ -29,8 +25,6 @@ For each board:
 ## Soldering ASIC Breakouts
 
 The ASIC breakouts can be ordered in panels (JLC will claim they can't panelize V-scored boards but they will do it just fine if you include it in the notes). See the SparkFun tutorial [How to Design a MicroMod Processor Board](https://learn.sparkfun.com/tutorials/designing-with-micromod/all#how-to-design-a-micromod-processor-board) and the [SparkFun KiCAD Panelizer](https://github.com/sparkfun/SparkFun_KiCad_Panelizer) + a stencil. For export-controls + risk reasons we assemble the chips onto the boards locally rather than shipping the chips overseas.
-
-(TODO: insert picture of one full panel fresh from fab + picture of stencil)
 
 1. Apply paste to the panel using the stencil. Some bridging is OK, but ensure there is not execess paste at a thickness greater than that of the stencil.
 
@@ -44,7 +38,7 @@ The ASIC breakouts can be ordered in panels (JLC will claim they can't panelize 
 
 Before starting the flashing/test process:
 
-1. Load Adafruit Circuit Playground (TODO: which one??) bootloader onto a micro-SD card. Load Arduino flasher (flash_from_SD) onto Arduino MKR Zero and insert SD card. May need to update the pins in `flash_from_SD` to match the pins on your board. For more details see the [relevant Adafruit documentation](https://learn.adafruit.com/programming-an-m0-using-an-arduino/overview).
+1. Load Adafruit Circuit Playground bootloader onto a micro-SD card. Load Arduino flasher (flash_from_SD) onto Arduino MKR Zero and insert SD card. May need to update the pins in `flash_from_SD` to match the pins on your board. For more details see the [relevant Adafruit documentation](https://learn.adafruit.com/programming-an-m0-using-an-arduino/overview).
 
 2. Wire up the Tag-Connect to your Arduino. The pins you need are SWD, SWC, RESETn, 3V3, and GND. Following is the pinout of the Tag-Connect on the board (hole pattern is asymmetric and can be used to orient).
 
@@ -59,8 +53,6 @@ Before starting the flashing/test process:
 ## Flashing Each Board
 
 1. Insert ASIC breakout into the slot at a 45 degree angle, gently tighten the screw (avoid torquing too much). Verify that the breakout is sitting flat and aligned correctly with the connector (if it is too much of an angle, pins can short to other pins).
-
-(TODO: insert image of alignment)
 
 2. Connect Tag-Connect to the board. Do NOT connect USB to the board. Verify that current-draw (on the PSU or USB power meter) does not spike past \~200mA. Verify that 1v8, 3v3, and "power" LEDs are all lit up.
 

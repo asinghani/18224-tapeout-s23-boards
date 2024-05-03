@@ -29,7 +29,7 @@ If you run into any issues, feel free to email `ece224-bringup-help-s23 [at] lis
 
 To assist in bringup and testing of your tapeout projects, we have provided a "debugger" board that includes your chip, 1V8 and 3V3 power rails, and an ATSAMD21 microcontroller flashed with an Arduino bootloader for easy testing.
 
-(TODO: image of the fully assembled board with annotations)
+(image of the fully assembled board with annotations)
 
 The board is powered via USB-C and can be powered from your computer. Please make sure you are using a USB-C cable with data lines (if you are using a "power-only" cable or the cable isn't firmly connected, it will appear to power up but not be detected by the serial port).
 
@@ -41,7 +41,7 @@ Use a small pin or similar tool to move the switches as they are too small to se
 
 **IMPORTANT:** Regardless of what method you are using to interact with your design, you must always manually set the "select" switches.
 
-(TODO: image of the switches and example of selecting a project)
+(image of the switches and example of selecting a project)
 
 You can find the index of your project in the [design list repo](https://github.com/asinghani/18224-s23-tapeout/tree/main/designs)
 
@@ -149,7 +149,7 @@ Some example programs are provided in [debugger_fw/d01_example_adder](debugger_f
 
 On the debugger board: Populate the 30-pin connector in the middle with a male header. Take care to ensure the header sits perpendicular to the board and is not skewed.
 
-(TODO: image of header)
+(image of header)
 
 On the buttons/switches board: Populate two 3-pin male headers on the `IN[0] sel` and `IN[1] sel` footprints. Populate a 30-pin female header on the _bottom_ side, for connecting to the debugger board.
 
@@ -157,7 +157,7 @@ On the buttons/switches board: Populate two 3-pin male headers on the `IN[0] sel
 
 **If you are driving the chip's inputs externally (i.e. not from the debugger), it is very important that the debugger be held in reset.** To do so, populate the 2-pin RESET header with a 2-pin male header. Insert a pin-jumper to keep the debugger in reset. You can verify it is disabled by making sure the USB device no longer enumerates on your computer (but it still receives power).
 
-(TODO: image of reset header)
+(image of reset header)
 
 #### How to Use
 
@@ -170,13 +170,13 @@ On the buttons/switches board: Populate two 3-pin male headers on the `IN[0] sel
 
 On the debugger board: Populate the 30-pin connector in the middle with a male header. Take care to ensure the header sits perpendicular to the board and is not skewed.
 
-(TODO: image of header)
+(image of header)
 
 #### Disabling the debugger
 
 **If you are driving the chip's inputs externally (i.e. not from the debugger), it is very important that the debugger be held in reset.** To do so, populate the 2-pin RESET header with a 2-pin male header. Insert a pin-jumper to keep the debugger in reset. You can verify it is disabled by making sure the USB device no longer enumerates on your computer (but it still receives power).
 
-(TODO: image of reset header)
+(image of reset header)
 
 #### Usage
 
@@ -192,12 +192,19 @@ Varies based on your project. If you're using a single-stepped clock, you must s
 
 ## Internal Documentation
 
-TODO
+[https://github.com/asinghani/18224-tapeout-s23-bringup](https://github.com/asinghani/18224-tapeout-s23-bringup)
 
+[https://github.com/asinghani/18224-s23-tapeout](https://github.com/asinghani/18224-s23-tapeout)
+
+[https://github.com/asinghani/18224-tapeout-s23-caravel](https://github.com/asinghani/18224-tapeout-s23-caravel)
+
+<!--
 - link to schematics
 - link to kicad files
 - link to multiplexer systemverilog
 - link to assmebly guide
+-->
+
 
 
 

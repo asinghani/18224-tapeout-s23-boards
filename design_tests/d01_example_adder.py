@@ -2,7 +2,7 @@
 from interface import *
 import sys
 
-## Test code for design 2 (counter)
+## Test code for design 1 (adder)
 c = Chip(sys.argv[1], 115200)
 
 c.step_clock(10)

@@ -4,6 +4,18 @@ geometry: margin=3cm
 
 # Board Bringup Instructions
 
+## [IMPORTANT] Errata
+ 
+- When the debugger microcontroller is in reset, chip output 3 is held low rather than being high-impedance (as all other pins are).
+    - This can be worked around by loading a firmware that manually sets all pins to high-impedance. See here for the firmware: [TODO]
+    - This is the result of a silicon errata in the ATSAMD21 microcontroller, see 1.13.2 in the [ATSAMD21 Silicon Errata](https://ww1.microchip.com/downloads/en/DeviceDoc/SAM-D21DA1-Family-Silicon-Errata-and-Data-Sheet-Clarification-DS80000760G.pdf)
+    - When using the "switches board" - the small jumper on the bottom side (near the header) needs to be cut (using a knife) in order to not forcibly hold the microcontroller in reset
+- USB C-C cables cannot be used to power the board due to an issue in the PD circuit. You will need to use a USB A-C cable.
+- After changing the design, the clock must be stepped at least 5 times before the design is loaded
+- F22 designs (TinyTapeout-style designs)
+	- CLK is on IN[0] instead of CLK pin
+	- Must still step the CLK pin to set the design
+
 ## Kit Contents
 
 (Please be cautious when opening the kit as small parts are easy to lose. The kits include spares for some—but not all—parts.)
@@ -182,13 +194,6 @@ On the debugger board: Populate the 30-pin connector in the middle with a male h
 
 Varies based on your project. If you're using a single-stepped clock, you must step it at least 5 times after powering on the chip so that the "project selection" register is updated.
 
-## Errata + Caveats
- 
-- Caveats for F22 designs (TinyTapeout-style designs)
-	- CLK is on IN[0] instead of CLK pin
-	- Must still step the CLK pin to set the design
-- Need several clock cycles for setting the design
-- Reset does not synchronize
 
 ## Internal Documentation
 

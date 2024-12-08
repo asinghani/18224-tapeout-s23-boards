@@ -7,7 +7,7 @@ geometry: margin=3cm
 ## [IMPORTANT] Errata
  
 - When the debugger microcontroller is in reset, chip output 3 is held low rather than being high-impedance (as all other pins are).
-    - This can be worked around by loading a firmware that manually sets all pins to high-impedance. See here for the firmware: [TODO]
+    - This can be worked around by loading a firmware that manually sets all pins to high-impedance.
     - This is the result of a silicon errata in the ATSAMD21 microcontroller, see 1.13.2 in the [ATSAMD21 Silicon Errata](https://ww1.microchip.com/downloads/en/DeviceDoc/SAM-D21DA1-Family-Silicon-Errata-and-Data-Sheet-Clarification-DS80000760G.pdf)
     - When using the "switches board" - the small jumper on the bottom side (near the header) needs to be cut (using a knife) in order to not forcibly hold the microcontroller in reset
 - USB C-C cables cannot be used to power the board due to an issue in the PD circuit. You will need to use a USB A-C cable.

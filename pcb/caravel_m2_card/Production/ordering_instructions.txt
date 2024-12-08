@@ -1,7 +1,3 @@
-Ordering Instructions:
-Panel dimensions: 148.36 x 76.30 mm.
-Solder Mask: Red (Default)
-Silkscreen: White (Default)
 Layers: 4
 Finish: HASL Lead-free (Default)
 Thickness: 1.6mm (Default)
